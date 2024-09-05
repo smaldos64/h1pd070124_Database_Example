@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Database_Example.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WEB_API_URL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://webapistudent.buchwaldshave34.dk/api/student</Value>
+    </Setting>
+    <Setting Name="WEB_API_STUDENT_URL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://webapistudent.buchwaldshave34.dk/api/student</Value>
+    </Setting>
+    <Setting Name="WEB_API_TEAM_URL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://webapistudent.buchwaldshave34.dk/api/team</Value>
+    </Setting>
+    <Setting Name="WEB_API_COURSE_URL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://webapistudent.buchwaldshave34.dk/api/course</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

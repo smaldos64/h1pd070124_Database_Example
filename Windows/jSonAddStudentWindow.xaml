@@ -1,0 +1,39 @@
+﻿<Window x:Class="Database_Example.Windows.jSonAddStudentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Database_Example.Windows"
+        mc:Ignorable="d"
+        Title="jSonAddStudentWindow" Height="600" Width="800">
+    <Grid>
+        <StackPanel Margin="18">
+            <TextBlock x:Name="txtBlockStudentName" TextWrapping="Wrap" Text="Student Fornavn : "/>
+            <TextBox x:Name="txtStudentName" Height="23" TextWrapping="Wrap" Text=""/>
+
+            <TextBlock x:Name="txtBlockStudentLastName" TextWrapping="Wrap" Text="Student Efternavn : "/>
+            <TextBox x:Name="txtStudentLastName" Height="23" TextWrapping="Wrap" Text=""/>
+
+            <ListView Margin="10" Name="lvTeam" ItemsSource="{Binding}"></ListView>
+
+            <ListBox Name="lbCourses" Margin="15" Width="200" Height="190">
+                <!-- Because CheckBox indicates selection, hide standard ListBox -->
+                <!-- selection behavior -->
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="{x:Type ListBoxItem}">
+                        <Setter Property="Focusable" Value="False"/>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+                <!-- Each item in list is a CheckBox -->
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <CheckBox Content="{Binding Name}" IsChecked="{Binding IsSelected}"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+            <Button x:Name="btnSaveStudent" Content="Gem og Vend tilbage til Liste" Click="btnSaveStudent_Click"  />
+
+        </StackPanel>
+    </Grid>
+</Window>
